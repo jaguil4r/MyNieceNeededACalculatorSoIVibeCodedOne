@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-lcd);
+  color: var(--calc-display-text);
+}
+
+.alexisMode {
+  color: var(--primary-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid currentColor;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.graphButton {
+  padding: 4px 12px;
+  font-size: 11px;
+  font-family: var(--font-ui);
+  background: var(--calc-button-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.graphButton:hover {
+  filter: brightness(1.1);
+}
+
+.alexisMode .graphButton {
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.functions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.functionRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+
+.funcId {
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 32px;
+}
+
+.input {
+  flex: 1;
+  padding: 6px 8px;
+  font-family: var(--font-lcd);
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.2);
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.input::placeholder {
+  color: rgba(128, 128, 128, 0.6);
+  font-style: italic;
+}
+
+.help {
+  font-size: 10px;
+  opacity: 0.7;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.help p {
+  margin: 2px 0;
+}
+
+.backButton {
+  padding: 6px 12px;
+  font-size: 11px;
+  font-family: var(--font-ui);
+  background: rgba(0, 0, 0, 0.3);
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.backButton:hover {
+  background: rgba(0, 0, 0, 0.5);
+}

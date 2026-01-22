@@ -1,0 +1,215 @@
+.button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: var(--button-height);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  transition: transform 0.1s, box-shadow 0.1s, filter 0.1s;
+  overflow: visible;
+  padding: 2px 4px;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Color variants */
+.dark {
+  background: linear-gradient(180deg, #4a4a4a 0%, #3a3a3a 50%, #2a2a2a 100%);
+  color: white;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dark:active {
+  background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 50%, #1a1a1a 100%);
+}
+
+.light {
+  background: linear-gradient(180deg, #f0f0f0 0%, #e0e0e0 50%, #d0d0d0 100%);
+  color: #333;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.light:active {
+  background: linear-gradient(180deg, #e0e0e0 0%, #d0d0d0 50%, #c0c0c0 100%);
+}
+
+.blue {
+  background: linear-gradient(180deg, #5a8ed2 0%, #4a7ec2 50%, #3568a8 100%);
+  color: white;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.blue:active {
+  background: linear-gradient(180deg, #4a7ec2 0%, #3568a8 50%, #255898 100%);
+}
+
+.yellow {
+  background: linear-gradient(180deg, #ffe066 0%, #f5d742 50%, #e0c030 100%);
+  color: #333;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.yellow:active {
+  background: linear-gradient(180deg, #f5d742 0%, #e0c030 50%, #d0b020 100%);
+}
+
+.green {
+  background: linear-gradient(180deg, #62d262 0%, #52c252 50%, #42a842 100%);
+  color: white;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.green:active {
+  background: linear-gradient(180deg, #52c252 0%, #42a842 50%, #329832 100%);
+}
+
+/* Labels */
+.primary {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.secondary {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8px;
+  font-weight: 500;
+  color: #f5d742;
+  white-space: nowrap;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.secondary.active {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.1);
+  color: #ffe066;
+  text-shadow: 0 0 6px #f5d742;
+}
+
+.alpha {
+  position: absolute;
+  top: -12px;
+  right: 2px;
+  font-size: 8px;
+  font-weight: 500;
+  color: #52c252;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.alpha.active {
+  opacity: 1;
+  transform: scale(1.1);
+  color: #62d262;
+  text-shadow: 0 0 6px #52c252;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+/* Active modifier states */
+.secondActive {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(245, 215, 66, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.alphaActive {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(82, 194, 82, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Alexis Mode enhancements */
+.alexisMode {
+  transition: transform 0.1s, box-shadow 0.15s, filter 0.15s;
+}
+
+.alexisMode:hover {
+  filter: brightness(1.1);
+}
+
+.alexisMode.dark {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary-color) 15%, #4a4a4a) 0%,
+    color-mix(in srgb, var(--secondary-color) 10%, #3a3a3a) 50%,
+    color-mix(in srgb, var(--primary-color) 5%, #2a2a2a) 100%
+  );
+}
+
+.alexisMode.light {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary-color) 20%, #f0f0f0) 0%,
+    color-mix(in srgb, var(--secondary-color) 15%, #e0e0e0) 50%,
+    color-mix(in srgb, var(--accent-color) 10%, #d0d0d0) 100%
+  );
+}
+
+.alexisMode.blue {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary-color) 30%, #5a8ed2) 0%,
+    color-mix(in srgb, var(--secondary-color) 25%, #4a7ec2) 50%,
+    color-mix(in srgb, var(--primary-color) 20%, #3568a8) 100%
+  );
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 15px color-mix(in srgb, var(--primary-color) 40%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.alexisMode:active {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 0 20px color-mix(in srgb, var(--primary-color) 60%, transparent),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 360px) {
+  .primary {
+    font-size: 10px;
+  }
+
+  .secondary,
+  .alpha {
+    font-size: 7px;
+    top: -10px;
+  }
+}

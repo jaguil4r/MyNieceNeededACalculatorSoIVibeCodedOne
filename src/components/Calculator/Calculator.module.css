@@ -1,0 +1,96 @@
+.calculator {
+  background: var(--calc-body-gradient);
+  border-radius: var(--calc-border-radius);
+  padding: var(--calc-padding);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.alexisMode {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary-color) 20%, #2d2d2d) 0%,
+    color-mix(in srgb, var(--secondary-color) 15%, #1d1d1d) 100%
+  );
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    0 0 60px color-mix(in srgb, var(--primary-color) 30%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #c0c0c0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.alexisMode .brandName {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--accent-color)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.modelNumber {
+  font-size: 10px;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.screenContainer {
+  background: var(--calc-display-bg);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 12px;
+  min-height: var(--display-height);
+  box-shadow:
+    inset 0 2px 8px rgba(0, 0, 0, 0.3),
+    0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.alexisMode .screenContainer {
+  background: linear-gradient(
+    180deg,
+    rgba(26, 26, 46, 0.95),
+    rgba(20, 20, 40, 0.98)
+  );
+  border: 1px solid color-mix(in srgb, var(--primary-color) 30%, transparent);
+  box-shadow:
+    inset 0 2px 8px rgba(0, 0, 0, 0.5),
+    0 0 20px color-mix(in srgb, var(--primary-color) 20%, transparent);
+}

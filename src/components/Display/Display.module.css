@@ -1,0 +1,126 @@
+.display {
+  font-family: var(--font-lcd);
+  color: var(--calc-display-text);
+  min-height: calc(var(--display-height) - 16px);
+  display: flex;
+  flex-direction: column;
+}
+
+.alexisMode {
+  color: var(--primary-color);
+}
+
+.statusBar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+}
+
+.modeName {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modifier {
+  font-weight: bold;
+}
+
+.alexisMode .modifier {
+  color: var(--accent-color);
+}
+
+.history {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.historyItem {
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+.historyInput {
+  text-align: left;
+}
+
+.historyResult {
+  text-align: right;
+  font-weight: bold;
+}
+
+.inputLine {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  min-height: 28px;
+  margin-top: 4px;
+}
+
+.input {
+  word-break: break-all;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.alexisMode .cursor {
+  color: var(--accent-color);
+  text-shadow: 0 0 8px var(--accent-color);
+}
+
+.error {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff4444;
+  text-align: center;
+  margin-top: 8px;
+  animation: shake 0.3s ease-in-out;
+}
+
+.alexisMode .error {
+  color: #ff6b6b;
+  text-shadow: 0 0 10px #ff6b6b;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+.result {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 8px;
+}
+
+.alexisMode .result {
+  text-shadow: 0 0 10px var(--primary-color);
+}

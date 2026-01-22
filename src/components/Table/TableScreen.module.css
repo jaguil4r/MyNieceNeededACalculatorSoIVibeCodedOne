@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-lcd);
+  color: var(--calc-display-text);
+  height: 100%;
+}
+
+.alexisMode {
+  color: var(--primary-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid currentColor;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.editButton {
+  padding: 4px 8px;
+  font-size: 10px;
+  font-family: var(--font-ui);
+  background: rgba(0, 0, 0, 0.3);
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editButton:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.settings {
+  display: flex;
+  gap: 16px;
+  font-size: 11px;
+}
+
+.settings label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.settings input {
+  width: 60px;
+  padding: 4px 6px;
+  font-family: var(--font-lcd);
+  font-size: 11px;
+  background: rgba(0, 0, 0, 0.2);
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  outline: none;
+}
+
+.settings input:focus {
+  border-color: var(--primary-color);
+}
+
+.noFunctions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  opacity: 0.7;
+}
+
+.noFunctions button {
+  padding: 8px 16px;
+  font-size: 12px;
+  font-family: var(--font-ui);
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tableWrapper {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.table th,
+.table td {
+  padding: 4px 8px;
+  text-align: right;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.table th {
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  background: var(--calc-display-bg);
+}
+
+.alexisMode .table th {
+  background: rgba(26, 26, 46, 0.95);
+}
+
+.table td {
+  font-family: var(--font-lcd);
+}
+
+.xCell {
+  font-weight: bold;
+  text-align: left !important;
+}
+
+.error {
+  color: #ff4444 !important;
+  font-style: italic;
+}
+
+.backButton {
+  padding: 6px 12px;
+  font-size: 11px;
+  font-family: var(--font-ui);
+  background: rgba(0, 0, 0, 0.3);
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: auto;
+}
+
+.backButton:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
